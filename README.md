@@ -26,11 +26,17 @@ https://public.tableau.com/app/profile/swetha.s3540/viz/OlistBrazilianE-Commerce
 
 Project Overview:
 
+
+
 Built an end-to-end E-commerce Analytics Dashboard using Streamlit and Tableau
 
 
 
-Data Processing (brazil\_ecom.py)
+
+
+Data Processing (brazil\_ecom.py):
+
+
 
 Merged multiple datasets (orders, customers, payments, reviews, products)
 
@@ -42,7 +48,11 @@ Generated final dataset: olist\_tableau\_ready.csv
 
 
 
-Dashboard (streamlit\_analysis.py)
+
+
+Dashboard (streamlit\_analysis.py):
+
+
 
 Built interactive dashboard with filters (year, category, state)
 
@@ -56,7 +66,11 @@ Statistical testing: T-test, Chi-square, ANOVA, Z-test
 
 
 
-Deployment
+
+
+Deployment:
+
+
 
 Deployed app using Streamlit Community Cloud
 
@@ -64,7 +78,11 @@ Published Tableau dashboard on Tableau Public
 
 
 
-Key Insights
+
+
+Key Insights:
+
+
 
 Identified top revenue categories and peak sales periods
 
