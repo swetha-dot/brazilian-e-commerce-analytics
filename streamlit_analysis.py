@@ -72,9 +72,10 @@ st.markdown("""
 # ─────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv(
-        r'C:\Users\hp\Documents\GitHub\tableau\analysis\dataset\olist_tableau_ready.csv'
-    )
+    df = pd.read_csv("dataset/olist_tableau_ready.csv")
+    #df = pd.read_csv(
+       # r'C:\Users\hp\Documents\GitHub\tableau\analysis\dataset\olist_tableau_ready.csv'
+    #)
     date_cols = [
         'order_purchase_timestamp',
         'order_delivered_customer_date',

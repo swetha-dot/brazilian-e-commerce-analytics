@@ -1,14 +1,14 @@
 import pandas as pd
 
-# Load all tables
-orders = pd.read_csv(r'C:\Users\hp\Documents\GitHub\tableau\analysis\dataset\olist_orders_dataset.csv')
-order_items = pd.read_csv(r'C:\Users\hp\Documents\GitHub\tableau\analysis\dataset\olist_order_items_dataset.csv')
-products = pd.read_csv(r'C:\Users\hp\Documents\GitHub\tableau\analysis\dataset\olist_products_dataset.csv')
-customers = pd.read_csv(r'C:\Users\hp\Documents\GitHub\tableau\analysis\dataset\olist_customers_dataset.csv')
-reviews = pd.read_csv(r'C:\Users\hp\Documents\GitHub\tableau\analysis\dataset\olist_order_reviews_dataset.csv')
-payments = pd.read_csv(r'C:\Users\hp\Documents\GitHub\tableau\analysis\dataset\olist_order_payments_dataset.csv')
-category_translation = pd.read_csv(r'C:\Users\hp\Documents\GitHub\tableau\analysis\dataset\product_category_name_translation.csv')
+BASE_PATH = "dataset/"
 
+orders = pd.read_csv(BASE_PATH + "olist_orders_dataset.csv")
+order_items = pd.read_csv(BASE_PATH + "olist_order_items_dataset.csv")
+products = pd.read_csv(BASE_PATH + "olist_products_dataset.csv")
+customers = pd.read_csv(BASE_PATH + "olist_customers_dataset.csv")
+reviews = pd.read_csv(BASE_PATH + "olist_order_reviews_dataset.csv")
+payments = pd.read_csv(BASE_PATH + "olist_order_payments_dataset.csv")
+category_translation = pd.read_csv(BASE_PATH + "product_category_name_translation.csv")
 # Parse dates
 date_cols = ['order_purchase_timestamp', 'order_delivered_customer_date',
              'order_estimated_delivery_date']
@@ -48,5 +48,5 @@ q = df['payment_value'].quantile(0.99)
 df  = df[df['payment_value'] <= q]
 
 # Save — Tableau needs CSV or Excel
-df.to_csv(r'C:\Users\hp\Documents\GitHub\tableau\analysis\dataset\olist_tableau_ready.csv', index=False)
+df.to_csv(BASE_PATH + "olist_tableau_ready.csv", index=False)
 print(f"Saved: {df.shape[0]:,} rows, {df.shape[1]} columns")
